@@ -1,0 +1,86 @@
+<!--
+Final Project: Mobile Application
+Created by: Faisal Hussein
+Date: 04/14/2019
+-->
+<html>
+    <head>	
+        <title>Card Kingdom </title>
+        <link rel="icon" href="img/webIcon.png" type="image" sizes="16x16">
+        <!--jQuery mobile-->
+        <script src="js/lib/jquery.mobile-1.4.5.js"></script>
+        <!--our scripts-->
+        <script src="js/inventory.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/database.js"></script>
+        <!--our stylesheet-->
+        <link rel="stylesheet" href="style/style.css"/>
+        
+    </head>
+    <body onload="loadData()">
+        <header>
+            <ul>
+                <li style="color: white;" class="opt" onclick="change(1)" id="opt1">Home</li>
+                <li class="opt" onclick="change(2)" id="opt2">Cards</li>
+                <li class="opt" onclick="change(3)" id="opt3">Account</li>
+                <li class="opt" onclick="change(4)" id="opt4">Checkout</li>
+                <li class="opt" onclick="change(5)" id="opt5">About</li>
+            </ul>
+        </header>
+        <div id="home" class="page" style="color: white;">
+            <section data-role="content">
+                    <h2>Welcome to Card Kingdom. We offer Cardfight!! Vanguard Cards Cheap, 
+                        Fast, Mint, for over 5 years!</h2>
+                    <div class="homepage">
+                        <img class="slideShow" src="img/banner3.jpg" style="width:100%">
+                        <img class="slideShow" src="img/banner.png" style="width:100%">
+                        <img class="slideShow" src="img/banner2.png" style="width:100%">
+                    </div>
+            </section>
+        </div>
+        <div id="home1" class="page">
+            <div id="cardView">
+                <div id="showList"></div><br>
+                <button  onclick="AddToCart()" class="cardBtn">Add to Cart</button>
+                <button  onclick="ClearCart()" class="cardBtn">Clear</button>
+            </div>
+                
+        </div>
+        <div id="home2" class="page">
+            <div>
+                <div id="proPic"><img src="profile.png"/></div>
+                <div id="proInfo">
+                    <label>FirstName:</label><br><br><br><br><br>
+                    <label>LastName:</label><br><br><br><br><br>
+                    <label>Email:</label>
+                </div>
+                <div id="proInfo">
+                    <input type="text" id="fname" value="" class="proInput"/><br><br><br><br>
+                    <input type="text" id="lname" value="" class="proInput"/><br><br><br><br>
+                    <input type="text" id="email" value="" class="proInput"/>
+                </div>
+            </div><br><br><br>
+            <div id="subs">
+                <button id="subBTN" onclick="cancelAcc()">Cancel</button>
+                <button id="subBTN" onclick="makeAccount()">Submit</button>
+            </div>
+        </div>
+        <div id="home3" class="page">
+            <div id="cartCScan"></div>
+
+        </div>
+        <div id="about" class="page" style="color: white;">
+                <section data-role="content">
+                    <h1>Card Kingdom Inc</h1><br><br>
+                    <p>We welcome walk-in customers to our new location: 172 Speedwagon Rd, Toronto Ontario</p><br>
+                    <p>We’ve been in business for over 5 years serving you cheap, fast, and mint trading cards.</p><br>
+                    <p> Store Hours - Eastern Time (US & Canada)</p><br>
+                    <p>Monday - Thursday: 9AM - 7PM Fridays & Saturdays: 10AM – 5PM (Closed Sundays)</p><br>
+                    <p>Please feel free to contact me if you have any suggestions!</p><br>
+                    <p>Phone: 416-????-?????</p><br>
+                    Email: <a href="mailto:fhussein0878@conestogac.on.ca">fhussein0878@conestogac.on.ca</a>
+                </section>
+        </div>
+    </body>
+</html>
